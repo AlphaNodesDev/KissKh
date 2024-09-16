@@ -1,0 +1,38 @@
+{
+  "name": "KissKh", 
+  "version": "1.0.0",
+  "description": "A Windows Application To Watch KissKh Dramas without Ads",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^25.9.8"
+  },
+  "build": {
+    "appId": "com.KissKh.windows",  
+    "win": {
+      "target": "nsis",
+      "icon": "src/assets/icon.ico" 
+    },
+    "directories": {
+      "buildResources": "src/assets" 
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "KissKh"  
+    }
+  },
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.33.2",
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "cross-fetch": "^4.0.0",
+    "discord-rpc": "^4.0.1",
+    "open": "^10.1.0"
+  }
+}
